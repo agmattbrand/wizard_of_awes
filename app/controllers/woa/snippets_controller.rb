@@ -1,6 +1,6 @@
 class Woa::SnippetsController < ApplicationController
   protect_from_forgery
-  layout 'wizard_of_awes'
+  layout 'woa/layouts/wizard_of_awes'
   before_filter :check_for_auth
   
   def index
