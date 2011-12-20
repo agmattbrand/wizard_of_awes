@@ -40,7 +40,7 @@ module WizardOfAwes
       if rails?
         require 'wizard_of_awes/railtie'
       else
-        Kaminari::Hooks.init!
+        WizardOfAwes::Hooks.init!
       end      
     end
 
