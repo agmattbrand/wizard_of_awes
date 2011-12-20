@@ -12,19 +12,39 @@
 body#woa-body {
   background-color : #ccc;
   margin : 0 auto;
+  width : 800px;
+	font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+
   div#woa-container {
-    width : 500px;
+    width : 100%;
+    margin-top : 20px;
+    padding : 10px;
     background-color : #fff;
     font-size : 11px;
     @include woa-radius(10px);
-  	@include shadow(3px,3px,6px,#333);
+  	@include woa-shadow(3px,3px,6px,#333);
   }
   table.woa-data {
+    width : 100%;
+    tr:first-child {
+    	background-color : #999;
+    	font-weight : bold;
+    }
     tr.woa-even {
       background-color : #ccc;
     }
     tr.woa-odd {
       background-color : #eee;
+    }
+    td {
+      padding : 5px;
+    }
+    td.centered {
+    	text-align : center;
+    }
+    td.action {
+    	text-align : center;
+    	width : 150px;
     }
   }
 }
