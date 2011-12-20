@@ -1,7 +1,3 @@
-require "wizard_of_awes/version"
-require 'wizard_of_awes/configuration'
-require 'wizard_of_awes/helpers'
-
 module WizardOfAwes
   def self.frameworks
     frameworks = ['rails']
@@ -32,7 +28,8 @@ module WizardOfAwes
     end
       
     def self.load_wizard_of_awes!
-      require 'wizard_of_awes/config'
+      require "wizard_of_awes/version"
+      require 'wizard_of_awes/configuration'
       require 'wizard_of_awes/helpers'
     end    
 
