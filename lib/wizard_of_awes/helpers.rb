@@ -6,7 +6,7 @@ module WizardOfAwes
   module ActionViewExtension
     # ==== Options
     # * <tt>:slug</tt> - Which snippet to look up.  Defaults to the current_page slug
-    def woa_snippet(scope, options = {})
+    def woa_snippet(*options)
       "Wizard Of Awes: Coming Soon"
     end
   end
