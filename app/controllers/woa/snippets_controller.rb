@@ -55,7 +55,10 @@ class Woa::SnippetsController < ApplicationController
   
   private
   def check_for_auth
-    
+    if WizardOfAwes.config.authentication_method.blank?
+      redirect_to(root_path, :notice => 'You are not authorized to be here')
+    else
+    end
   end
   
 end

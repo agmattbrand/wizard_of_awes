@@ -12,7 +12,6 @@ module WizardOfAwes
   class Configuration #:nodoc:
     include ActiveSupport::Configurable
     config_accessor :snippet_route_prefix
-    config_accessor :current_user_method
     config_accessor :authentication_method
 
     def param_name
@@ -22,7 +21,6 @@ module WizardOfAwes
 
   configure do |config|
     config.snippet_route_prefix = 'woa-snippets'
-    config.current_user_method = :current_helper_user
-    config.authentication_method = :authenticate_helper_user!
+    config.authentication_method = ''
   end
 end

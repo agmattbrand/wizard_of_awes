@@ -1,4 +1,4 @@
-<%= semantic_form_for @snippet, :url => woa_snippets_path, :validate => true do |f| %>
+<%= semantic_form_for @snippet, :url => "#{woa_snippets_url}/#{(@snippet.id ? @snippet.id : '')}", :validate => true do |f| %>
 	<%= f.inputs do %>
 		<%= f.input :slug %>
 		<%= f.input :body, :as => :text %>

@@ -9,17 +9,12 @@ WizardOfAwes.configure do |config|
   #
   # This setting changes the method which Wizard Of Awes calls
   # within the controller.
-  config.authentication_method = :authenticate_helper_user!
+  #
+  # If this is not specified, nobody will be able to add snippets
+  # config.authentication_method = :authenticate_helper_user!
 
   # Default url to access admin area is http://yourhost/woa-snippets/
   # You can change 'woa-snippets' to anything you want. To disable this area
   # entirely set this to '' or nil
   # config.snippet_route_prefix = 'woa-snippets'
-
-  # == Current User
-  #
-  # Wizard Of Awes will associate actions with the current
-  # user performing them.
-  #
-  config.current_user_method = :current_helper_user
 end
