@@ -14,6 +14,8 @@ module WizardOfAwes
     end
 
     def woa_markdown(text)
+      include 'redcarpet'
+      
       options = [:hard_wrap, :filter_html, :autolink, :no_intraemphasis, :fenced_code]
       Redcarpet.new(text, *options).to_html.html_safe  
     end
