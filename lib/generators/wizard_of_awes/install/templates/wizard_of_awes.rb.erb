@@ -1,8 +1,8 @@
 WizardOfAwes.configure do |config|
   # == User Authentication
   #
-  # Wizard Of Awes will automatically call an authentication
-  # method in a before filter of the content editor controller actions to
+  # Wizard Of Awes will automatically call this method
+  # in a before filter of the content editor controller actions to
   # ensure that there is a currently logged in helper user.
   #
   # Also, if the user is a helper user, any helper snippets will have quick edit links
@@ -11,7 +11,7 @@ WizardOfAwes.configure do |config|
   # within the controller.
   #
   # If this is not specified, nobody will be able to add snippets
-  # config.authentication_method = :authenticate_helper_user!
+  # config.is_helper_user = :is_helper_user?
 
   # Default url to access admin area is http://yourhost/woa-snippets/
   # You can change 'woa-snippets' to anything you want. To disable this area
