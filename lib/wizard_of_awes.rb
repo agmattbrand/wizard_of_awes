@@ -39,6 +39,7 @@ module WizardOfAwes
       require 'wizard_of_awes/hooks'
       if rails?
         require 'wizard_of_awes/railtie'
+        require 'wizard_of_awes/engine'
       else
         WizardOfAwes::Hooks.init!
       end      
