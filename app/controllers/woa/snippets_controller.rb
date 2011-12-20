@@ -55,10 +55,11 @@ class Woa::SnippetsController < ApplicationController
   
   private
   def check_for_auth
-    if WizardOfAwes.config.authentication_method.blank?
+    if WizardOfAwes.config.is_helper_user.blank?
       redirect_to(root_path, :notice => 'You are not authorized to be here')
     else
-      eval(Rails.application.class.parent_name + "::Application").send(WizardOfAwes.config.is_helper_user)
+      ApplicationController.new.send(WizardOfAwes.config.is_helper_user)
+      # eval(Rails.application.class.parent_name + "::Application").send(WizardOfAwes.config.is_helper_user)
     end
   end
   
