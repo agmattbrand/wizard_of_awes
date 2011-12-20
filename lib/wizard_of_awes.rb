@@ -36,12 +36,10 @@ module WizardOfAwes
     def self.hook!
       load_framework!
       load_wizard_of_awes!
-      require 'wizard_of_awes/hooks'
+      # require 'wizard_of_awes/hooks'
       if rails?
         require 'wizard_of_awes/railtie'
         require 'wizard_of_awes/engine'
-      else
-        WizardOfAwes::Hooks.init!
       end      
     end
 
