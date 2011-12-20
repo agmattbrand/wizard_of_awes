@@ -1,0 +1,19 @@
+<h1>Wizard of Awes Snippets</h1>
+<h3><%= link_to "New Snippet", new_woa_snippet_path %></h3>
+<table class="woa-data">
+	<tr>
+		<td>Slug</td>
+		<td>Body</td>
+		<td align="center">Actions</td>
+	</tr>
+<% @snippets.each do |s| %>
+  <tr class="<%= cycle("woa-even", "woa-odd") %>">
+    <td style="width:100px;"><%= link_to s.slug, edit_woa_snippet_path(s.id) %></td>
+	<td><%= s.body %></td>
+    <td class="action">
+		<%= link_to "Edit", edit_woa_snippet_path(s.id) %>
+		<%= link_to "Delete", :confirm => "Are you sure?", :method => :delete %>
+	</td>
+  </tr>
+<% end %>
+</table>

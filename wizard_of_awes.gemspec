@@ -18,8 +18,10 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_dependency("rails", ">= 3.0.0")
+  s.add_dependency("rails", ">= 3.1.0")
   s.add_dependency("jquery-rails", ">= 1.0.0")  
   s.add_dependency("devise", ">= 1.1.2")
+  s.add_dependency("sass-rails", "~> 3.1.0")
+  s.add_dependency("formtastic")
   s.add_dependency("redcarpet")
 end

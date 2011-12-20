@@ -1,25 +1,30 @@
 class Woa::SnippetsController < ApplicationController
   protect_from_forgery
+  layout 'wizard_of_awes'
+  before_filter :check_for_auth
   
   def index
-    render
+    @snippets = HelperSnippet.all
   end
   
   def new
-    render
   end
   
   def show
   end
   
   def edit
-    render
   end
   
   def update
   end 
 
   def destroy
+  end
+  
+  private
+  def check_for_auth
+    
   end
   
 end

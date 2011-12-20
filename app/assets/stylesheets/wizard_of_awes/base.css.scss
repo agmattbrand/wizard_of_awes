@@ -1,0 +1,30 @@
+@mixin woa-radius($rad) {
+	-moz-border-radius: $rad;
+	border-radius: $rad;
+	-webkit-border-radius: $rad;
+}
+@mixin woa-shadow($hor,$ver,$blur,$color) {
+   -moz-box-shadow: $hor $ver $blur $color;
+   -webkit-box-shadow: $hor $ver $blur $color;
+   box-shadow: $hor $ver $blur $color;
+}
+
+body#woa-body {
+  background-color : #ccc;
+  margin : 0 auto;
+  div#woa-container {
+    width : 500px;
+    background-color : #fff;
+    font-size : 11px;
+    @include woa-radius(10px);
+  	@include shadow(3px,3px,6px,#333);
+  }
+  table.woa-data {
+    tr.woa-even {
+      background-color : #ccc;
+    }
+    tr.woa-odd {
+      background-color : #eee;
+    }
+  }
+}
