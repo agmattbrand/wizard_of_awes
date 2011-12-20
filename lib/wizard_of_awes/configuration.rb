@@ -2,7 +2,7 @@ require 'active_support/configurable'
 
 module WizardOfAwes
   def self.configure(&block)
-    yield @config ||= Kaminari::Configuration.new
+    yield @config ||= WizardOfAwes::Configuration.new
   end
   
   def self.config
