@@ -12,7 +12,7 @@ class Woa::SnippetsController < ApplicationController
   end
   
   def create
-    @snippet = HelperSnippet.new(params[:snippet])
+    @snippet = HelperSnippet.new(params[:helper_snippet])
 
     respond_to do |format|
       if @snippet.save
@@ -33,7 +33,7 @@ class Woa::SnippetsController < ApplicationController
     @snippet = HelperSnippet.find(params[:id])
 
     respond_to do |format|
-      if @snippet.update_attributes(params[:snippet])
+      if @snippet.update_attributes(params[:helper_snippet])
         format.html { redirect_to(woa_snippets_url, :notice => 'Snippet was successfully updated.') }
         format.xml  { head :ok }
       else

@@ -7,7 +7,13 @@ module WizardOfAwes
     # ==== Options
     # * <tt>:slug</tt> - Which snippet to look up.  Defaults to the current_page slug
     def woa_snippet(*slug)
-      "Looking up Snippet for: #{slug.present? ? slug : request.fullpath}"
+      s = slug.present? slug : request.fullpath
+      snippet = HelperSnippet.find_by_slug(s)
+      if snippet
+        markdown(snippet.body)
+      else
+        "No Snippet Found"
+      end
     end
   end
 end
