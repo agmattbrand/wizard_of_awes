@@ -36,6 +36,12 @@ module WizardOfAwes
     def self.hook!
       load_framework!
       load_wizard_of_awes!
+      require 'wizard_of_awes/hooks'
+      if rails?
+        require 'wizard_of_awes/railtie'
+      else
+        Kaminari::Hooks.init!
+      end      
     end
 
     def self.load!
