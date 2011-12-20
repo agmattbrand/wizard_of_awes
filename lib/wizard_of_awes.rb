@@ -30,7 +30,7 @@ module WizardOfAwes
     def self.load_wizard_of_awes!
       require "wizard_of_awes/version"
       require 'wizard_of_awes/configuration'
-      require 'wizard_of_awes/authorizations'
+      require 'wizard_of_awes/helper_auth'
       require 'wizard_of_awes/view_helpers'
     end    
 

@@ -7,6 +7,7 @@ module WizardOfAwes::HelperAuth
     # true
     
     # If things are not good
+    puts "REDIRECTING BECAUSE THINGS AREN'T GOOD"
     redirect_to(root_path)
   end
 end

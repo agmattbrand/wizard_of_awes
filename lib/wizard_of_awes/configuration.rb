@@ -12,7 +12,7 @@ module WizardOfAwes
   class Configuration #:nodoc:
     include ActiveSupport::Configurable
     config_accessor :snippet_route_prefix
-    config_accessor :is_helper_user
+    config_accessor :helper_auth
 
     def param_name
       config.param_name.respond_to?(:call) ? config.param_name.call : config.param_name
@@ -21,6 +21,6 @@ module WizardOfAwes
 
   configure do |config|
     config.snippet_route_prefix = 'woa-snippets'
-    config.is_helper_user = ''
+    config.helper_auth = 'WizardOfAwes::HelperAuth'
   end
 end

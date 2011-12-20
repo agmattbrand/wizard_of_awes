@@ -56,7 +56,7 @@ class Woa::SnippetsController < ApplicationController
   
   private
   def authorize_local
-    if WizardOfAwes.config.is_helper_user.blank?
+    if WizardOfAwes.config.helper_auth.blank?
       redirect_to(root_path, :notice => 'You are not authorized to be here')
     else
       :authorize
