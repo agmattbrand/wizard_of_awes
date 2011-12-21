@@ -12,7 +12,11 @@ WizardOfAwes.configure do |config|
   #
   # If this is not specified, nobody will be able to add snippets
   #
-  # It simply needs to have a method called 'woa_authorize'
+  # It needs to have two methods:
+  # 
+  # Method #1: 'woa_authorize' ## This should return true if the user is ok or redirect if they aren't
+  # Method #2: 'is_helper_user?' ## This should return true if the user is ok or false if they aren't
+  #
   # config.helper_auth = 'WizardOfAwes::HelperAuth'
 
   # Default url to access admin area is http://yourhost/woa-snippets/

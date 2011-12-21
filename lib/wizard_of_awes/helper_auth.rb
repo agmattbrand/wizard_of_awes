@@ -9,4 +9,9 @@ module WizardOfAwes::HelperAuth
     # If things are not good
     redirect_to(root_path)
   end
+  
+  def is_helper_user?
+    # If user is a helper return true
+    # Else return false
+  end
 end

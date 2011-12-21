@@ -53,16 +53,6 @@ class Woa::SnippetsController < ApplicationController
       format.xml  { head :ok }
     end
   end
-  
-  # private
-  # def authorize_local
-  #   if WizardOfAwes.config.helper_auth.blank?
-  #     redirect_to(root_path, :notice => 'You are not authorized to be here')
-  #   else
-  #     WizardOfAwes.config.helper_auth.to_s.constantize.authorize()
-  #   end
-  # end
-  
 end
 
   
