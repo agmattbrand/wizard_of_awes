@@ -13,5 +13,6 @@ module WizardOfAwes::HelperAuth
   def is_helper_user?
     # If user is a helper return true
     # Else return false
+    false
   end
 end
