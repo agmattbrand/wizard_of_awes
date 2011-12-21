@@ -1,0 +1,66 @@
+= Wizard Of Awes
+
+A simple snippet manager for creating and inserting snippets of HTML into your application for Rails 3.1+
+
+== Features
+
+=== Simple
+1 tag.
+1 simple CRUD admin interface for managing snippets
+
+=== Easy to use
+Just install the gem and restart your server.  You can then start adding and including snippets.  
+
+== Supported versions
+
+* Ruby 1.8.7, 1.9.2, 1.9.3 (trunk)
+
+* Rails 3.1+ (edge)
+
+== Install
+
+Put this line in your Gemfile:
+  gem 'wizard_of_awes'
+
+Then bundle:
+  % bundle
+
+Run the generator:
+  % rails g wizard_of_awes:install
+
+Migration:
+  % bundle exec rake db:migrate
+
+== Usage
+
+=== General configuration options
+
+You can configure the following default values by overriding these values using <tt>WizardOfAwes.configure</tt> method.
+  helper_auth  			# WizardOfAwes::HelperAuth by default
+  snippet_route_prefix	# 'woa-snippets' by default
+
+=== Helper Options
+
+* woa_snippet
+
+    <%= woa_snippet %>
+  This would try and find a snippet with the key of the current page's full path.  
+
+* woa_snippet(key)
+
+    <%= woa_snippet('my_key') %>
+  This would try and find a snippet with the key of 'my_key'.  
+
+== Questions, Feedback
+
+Feel free to message me on Github (agmattbrand) or Twitter (@agmattbrand) 
+
+
+== Contributing to Wizard Of Awes
+
+* Fork, fix, then send me a pull request.
+
+
+== Copyright
+
+Copyright (c) 2011 Matt Brand. 
