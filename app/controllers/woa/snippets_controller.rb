@@ -2,7 +2,7 @@ class Woa::SnippetsController < ApplicationController
   protect_from_forgery
   layout 'woa/layouts/wizard_of_awes'
   include WizardOfAwes.config.helper_auth.to_s.constantize
-  before_filter :authorize_local
+  before_filter :woa_authorize
   
   def index
     @snippets = HelperSnippet.all
@@ -54,14 +54,14 @@ class Woa::SnippetsController < ApplicationController
     end
   end
   
-  private
-  def authorize_local
-    if WizardOfAwes.config.helper_auth.blank?
-      redirect_to(root_path, :notice => 'You are not authorized to be here')
-    else
-      :authorize
-    end
-  end
+  # private
+  # def authorize_local
+  #   if WizardOfAwes.config.helper_auth.blank?
+  #     redirect_to(root_path, :notice => 'You are not authorized to be here')
+  #   else
+  #     WizardOfAwes.config.helper_auth.to_s.constantize.authorize()
+  #   end
+  # end
   
 end
 
