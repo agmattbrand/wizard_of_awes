@@ -13,10 +13,7 @@ module WizardOfAwes
     end
 
     def woa_markdown(snippet)
-      options = [:hard_wrap, :filter_html, :autolink, :no_intraemphasis, :fenced_code]
-      output_text = snippet.body
-      raw output_text
-      # Redcarpet.new(text, *options).to_html.html_safe  
+      snippet.body
     end
   end
 end

@@ -24,5 +24,4 @@ Gem::Specification.new do |s|
   s.add_dependency("sass-rails", "~> 3.1.0")
   s.add_dependency("formtastic")
   s.add_dependency("client_side_validations")
-  s.add_dependency("redcarpet")
 end

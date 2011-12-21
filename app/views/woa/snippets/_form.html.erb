@@ -1,13 +1,21 @@
 <%= semantic_form_for @snippet, :url => "#{woa_snippets_url}/#{(@snippet.id ? @snippet.id : '')}", :validate => true do |f| %>
 	<%= f.inputs do %>
 		<%= f.input :slug %>
-		<%= f.input :body, :as => :text %>
+		Snippet Content*:
+		<div style="padding-top:4px;">
+			<%= f.input :body, :label => false, :as => :text %>
+		</div>
 	<% end %>
 	<div style="clear:both;display:block;margin-top:10px;margin-bottom:10px;">
-		<div class="actions">
-			<%= f.buttons do %>
-				<%= f.commit_button %>
-			<% end %>
-		</div>
+		<%= f.buttons do %>
+			<%= f.commit_button %>
+		<% end %>
 	</div>
 <% end %>
+<script>
+	$(document).ready(function() {
+		$("textarea").cleditor({
+			width: "98%"
+		});
+	});
+</script>

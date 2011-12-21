@@ -50,4 +50,11 @@ body#woa-body {
     	width : 150px;
     }
   }
+  form.formtastic fieldset.buttons {
+    padding-left : 0px;
+    li {
+      width : 100%;
+      text-align : center;
+    }
+  }
 }
